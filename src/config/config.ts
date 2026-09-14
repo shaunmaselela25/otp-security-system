@@ -14,5 +14,10 @@ export const config = {
         resendWindowMinutes: toNumber(process.env.OTP_RESEND_WINDOW_MINUTES, 5),
         maxResends: toNumber(process.env.OTP_MAX_RESENDS, 3),
     },
+    supabase: {
+        url: process.env.SUPABASE_URL ?? "",
+        anonKey: process.env.SUPABASE_ANON_KEY ?? "",
+        serviceRoleKey: process.env.SUPABASE_SERVICE_ROLE_KEY ?? "",
+    },
 };
 
